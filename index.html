@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <!-- https://source.unsplash.com/ -->
+  <head>
+    <meta charset="UTF-8">
+    <title>Unsplash Full Page Dynamic Background Image</title>
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+  </head>
+  <body>
+    <script>
+      function setBg() {
+        d = new Date();
+        var img = 'https://source.unsplash.com/random#'+d.getTime();
+        $('body').css({ "background": "url("+img+") no-repeat center center fixed",
+                        "-webkit-background-size": "cover", 
+                        "-moz-background-size": "cover",
+                        "-o-background-size": "cover",
+                        "background-size": "cover"});
+      }
+      setInterval(setBg, 5000);
+    </script>
+  </body>
+</html>
